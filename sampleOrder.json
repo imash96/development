@@ -1,0 +1,489 @@
+{
+    "type": "amazon",
+    "sellerName": "AMLR",
+    "orders": [
+        {
+            "actions": [
+                "editMerchantOrderId",
+                "editShipment",
+                "manageFeedback",
+                "manageSellerNotes",
+                "printPackingSlip",
+                "refundOrder",
+                "contactBuyer",
+                "canViewOrderHistory"
+            ],
+            "addressType": "Residential",
+            "alertMessages": [],
+            "alerts": [],
+            "amazonInvoiced": false,
+            "amazonOrderId": "701-6899969-4988250",
+            "address": {
+                "addressId": "IVYQ5YRR37KL3B7ZP6VUG12L3XLEPWM90A1L09MWPELX3L7PXTQ2EYA2OX2LXORL",
+                "messageStr": "",
+                "name": "Paul Clements",
+                "companyName": null,
+                "line1": "2 Attmar Drive",
+                "line2": "SIDE DOOR TO THE LEFT OF THE HOUSE",
+                "line3": null,
+                "city": "Brampton",
+                "county": null,
+                "municipality": null,
+                "stateOrRegion": "Ontario",
+                "postalCode": "L6P 2R4",
+                "countryCode": "CA",
+                "countryLine": "Canada",
+                "phoneNumber": "+14163160420",
+                "phoneNumberLine": "+14163160420",
+                "label": null,
+                "confidentialVisibleAddress": false
+            },
+            "assignedShipFromAddress": {
+                "addressId": "VLH6UWLQ526RU2XIY7DAG12HPFR73EUEBA31BEUE37RFPHNPXTQ2EQA2OXCTKZX3",
+                "messageStr": null,
+                "name": null,
+                "companyName": null,
+                "line1": null,
+                "line2": null,
+                "line3": null,
+                "city": null,
+                "county": null,
+                "municipality": null,
+                "stateOrRegion": null,
+                "postalCode": null,
+                "countryCode": "US",
+                "countryLine": null,
+                "phoneNumber": null,
+                "phoneNumberLine": null,
+                "label": "Bombino Express",
+                "confidentialVisibleAddress": false
+            },
+            "automatedShipFromLocationAddress": null,
+            "packageShipFromAddresses": [
+                {
+                    "addressId": "VLH6UWLQ526RU2XIY7DAG12HPFR73EUEBA31BEUE37RFPHNPXTQ2EQA2OXCTKZX3",
+                    "messageStr": null,
+                    "name": null,
+                    "companyName": null,
+                    "line1": null,
+                    "line2": null,
+                    "line3": null,
+                    "city": null,
+                    "county": null,
+                    "municipality": null,
+                    "stateOrRegion": null,
+                    "postalCode": null,
+                    "countryCode": "US",
+                    "countryLine": null,
+                    "phoneNumber": null,
+                    "phoneNumberLine": null,
+                    "label": "Bombino Express",
+                    "confidentialVisibleAddress": false
+                }
+            ],
+            "buyerCounty": null,
+            "buyerCpfNumber": null,
+            "buyerCstNumber": null,
+            "buyerName": "Paul",
+            "buyerVatNumber": null,
+            "recipientCustomerName": null,
+            "recipientCustomerPhone": null,
+            "buyerLegalName": null,
+            "buyerNationalId": null,
+            "buyerLegalEntityType": null,
+            "buyerLegalCompanyName": null,
+            "buyerBusinessAddress": null,
+            "buyerTaxRegistrationId": null,
+            "buyerTaxOffice": null,
+            "customerProfileLegalName": null,
+            "assignedShipFromLocationAddressId": "VLH6UWLQ526RU2XIY7DAG12HPFR73EUEBA31BEUE37RFPHNPXTQ2EQA2OXCTKZX3",
+            "automatedShippingSettings": {
+                "automatedCarrierName": null,
+                "automatedCarrierStringId": null,
+                "automatedShipFromLocationAddressId": null,
+                "automatedShipMethodName": null,
+                "automatedShipMethodStringId": null,
+                "hasAutomatedShippingSettings": false
+            },
+            "awaitingVerification": false,
+            "badges": [],
+            "badgesWithTooltips": [],
+            "billingCountry": null,
+            "billingCountryFlagUrl": null,
+            "buyerCompanyName": null,
+            "buyerPONumber": null,
+            "buyerProxyEmail": "gm9gfnphh10jwl3@marketplace.amazon.ca",
+            "cancelOrderDetails": null,
+            "cancellationDate": 1699340399,
+            "cancellationFees": null,
+            "cod": false,
+            "complexActions": {},
+            "deemedResellerCategory": null,
+            "deliveryNoteMetadata": null,
+            "earliestDeliveryDate": 1698649200,
+            "earliestShipDate": 1698217200,
+            "euDeemedReseller": true,
+            "filterShipFromLocations": true,
+            "fulfillmentChannel": "Seller",
+            "handoverAddressDetails": null,
+            "hasSensitiveRights": true,
+            "hasSystemUnknownPromiseDate": false,
+            "ibaSellerFacingOrders": null,
+            "instructionId": null,
+            "invoiceUploadMetadata": null,
+            "iossNumber": null,
+            "isAccessPointOrder": false,
+            "isBuybackOrder": false,
+            "isIBAOrder": false,
+            "labelAvailableDateUtc": null,
+            "labelRefundPackages": null,
+            "labelStatus": null,
+            "latestDeliveryDate": 1698994799,
+            "latestShipDate": 1698389999,
+            "marketplaceTaxingSeller": null,
+            "maximumTransitTimeDisplayUnit": "Day",
+            "orderChannel": null,
+            "orderCost": {
+                "CODCollectible": null,
+                "CODGrandTotal": {
+                    "Amount": 159.99,
+                    "CurrencyCode": "CAD",
+                    "EncryptedAmount": null
+                },
+                "CODTotal": null,
+                "CODTotalTax": null,
+                "CancelableRefundTotal": null,
+                "ExportChargeTotal": null,
+                "ExportChargeTotalTax": null,
+                "GiftWrapTotal": null,
+                "GiftWrapTotalTax": null,
+                "GrandTotal": {
+                    "Amount": 159.99,
+                    "CurrencyCode": "CAD",
+                    "EncryptedAmount": null
+                },
+                "NetSalesProceeds": null,
+                "PaymentMethodFeeTotal": null,
+                "PaymentMethodFeeTotalTax": null,
+                "Prepaid": null,
+                "PromotionTotal": null,
+                "PromotionTotalTax": null,
+                "RefundAppliedTotal": null,
+                "RefundPendingTotal": null,
+                "RefundTotal": null,
+                "ShippingTotal": null,
+                "ShippingTotalTax": null,
+                "TaxTotal": null,
+                "Total": {
+                    "Amount": 159.99,
+                    "CurrencyCode": "CAD",
+                    "EncryptedAmount": null
+                },
+                "TotalTax": null
+            },
+            "orderItems": [
+                {
+                    "ASIN": "B082V9HRDC",
+                    "AssociatedItems": [],
+                    "BuyerRequestedCancel": {
+                        "cancelReason": null,
+                        "isBuyerRequestedCancel": false
+                    },
+                    "Condition": "New",
+                    "ConditionNote": null,
+                    "ConditionSubtype": null,
+                    "CustomerOrderItemCode": "I6mZhIAoXIjyyAzufXMn11ywW1IezMnSQQJTc1GKGwdXxrHydej2zA==",
+                    "CustomizationInfoMap": {
+                        "numberOfItems": "1"
+                    },
+                    "Gift": false,
+                    "GiftMessage": null,
+                    "GiftWrapType": null,
+                    "HarmonizedCode": null,
+                    "ImageSourceSarek": false,
+                    "ImageUrl": "https://m.media-amazon.com/images/I/41oIWwdgDKL._SCLZZZZZZZ__SX55_.jpg",
+                    "InvoiceData": null,
+                    "ItemCost": {
+                        "COD": null,
+                        "CODGrandTotal": {
+                            "Amount": 159.99,
+                            "CurrencyCode": "CAD",
+                            "EncryptedAmount": null
+                        },
+                        "CODTax": null,
+                        "ExportCharge": null,
+                        "ExportChargeTax": null,
+                        "GiftWrap": null,
+                        "GiftWrapTax": null,
+                        "NetSalesProceeds": null,
+                        "PaymentMethodFee": null,
+                        "PaymentMethodFeeTax": null,
+                        "Promotion": null,
+                        "PromotionTax": null,
+                        "Refund": null,
+                        "RefundApplied": null,
+                        "RefundPending": null,
+                        "Shipping": null,
+                        "ShippingTax": null,
+                        "Subtotal": {
+                            "Amount": 159.99,
+                            "CurrencyCode": "CAD",
+                            "EncryptedAmount": null
+                        },
+                        "SubtotalTax": null,
+                        "Tax": null,
+                        "Total": {
+                            "Amount": 159.99,
+                            "CurrencyCode": "CAD",
+                            "EncryptedAmount": null
+                        },
+                        "UnitPrice": {
+                            "Amount": 159.99,
+                            "CurrencyCode": "CAD",
+                            "EncryptedAmount": null
+                        },
+                        "UnitPriceExclTax": null
+                    },
+                    "ItemCustomizations": null,
+                    "ItemHeight": null,
+                    "ItemLength": null,
+                    "ItemPointsSummary": {
+                        "PointsGranted": null,
+                        "Reversals": null
+                    },
+                    "ItemStatus": {
+                        "CancelStatus": "None",
+                        "InvoiceNotSent": false,
+                        "InvoiceSent": false,
+                        "ItemStatus": "Shipped"
+                    },
+                    "ItemWeight": null,
+                    "ItemWidth": null,
+                    "LegacyListingId": null,
+                    "OrderItemId": "86849377018041",
+                    "PriceDesignation": null,
+                    "ProductCustomizations": null,
+                    "ProductLink": "https://www.amazon.ca/gp/product/B082V9HRDC",
+                    "QuantityCanceled": 0,
+                    "QuantityOrdered": 1,
+                    "QuantityShipped": 1,
+                    "QuantityUnshipped": 0,
+                    "SellerSKU": "AML_NFSL_x067158",
+                    "SerialNumbers": null,
+                    "ShipmentIdLists": null,
+                    "SignatureRecommended": false,
+                    "Title": "New Fashion Style Men's Classic Leather Slim Fit Casual Blazer Stylish Fashinable Evening Coats, Black, XX-Large",
+                    "amazonPrograms": null,
+                    "expenseTotal": null,
+                    "hasLastMileNetworkIdVAS": false,
+                    "heavyOrBulky": false,
+                    "jointFreeShippingPromotionApplied": false,
+                    "packageType": null,
+                    "transparencyItem": false,
+                    "transparencyItemAttribute": {
+                        "isCheckEnabled": false,
+                        "primarySNCaptureTechnology": null
+                    }
+                }
+            ],
+            "orderMarketplaceId": "A2EUQ1WTGCTBG2",
+            "orderPointsSummary": {
+                "PointsGranted": null,
+                "Reversals": {
+                    "PointsReturned": null
+                }
+            },
+            "orderStatus": {
+                "AtRiskOfCancellation": false,
+                "InvoiceNotSent": false,
+                "InvoiceNotUploaded": false,
+                "InvoiceSent": false,
+                "Late": false,
+                "OrderStatus": "Shipped",
+                "RefundApplied": false,
+                "RefundPending": false
+            },
+            "orderType": null,
+            "packageHandlingInstructions": null,
+            "packages": [
+                {
+                    "Actions": {
+                        "cancelShipment": {
+                            "Available": false,
+                            "Reason": "ReasonNotAvailableNotCancellable"
+                        },
+                        "easyShipReprintLabel": {
+                            "Available": false,
+                            "Reason": "ReasonNotAvailableEasyShipOrder"
+                        },
+                        "editShipment": {
+                            "Available": true,
+                            "Reason": "Available"
+                        },
+                        "printPackingSlip": {
+                            "Available": true,
+                            "Reason": "Available"
+                        },
+                        "reprintLabel": {
+                            "Available": false,
+                            "Reason": "ReasonNotAvailableNotMssReprintable"
+                        }
+                    },
+                    "Carrier": "DHL",
+                    "ComplexActions": {
+                        "revokeShippingLabel": {
+                            "Available": false,
+                            "Reason": "ReasonNotMssEnabledOrder",
+                            "displayText": null,
+                            "properties": null
+                        }
+                    },
+                    "IsSignatureConfirmationApplied": false,
+                    "MssDetails": null,
+                    "PackageId": "145368",
+                    "PackageItems": [
+                        {
+                            "ASIN": "B082V9HRDC",
+                            "AssociatedItems": null,
+                            "BuyerRequestedCancel": null,
+                            "Condition": "New",
+                            "ConditionNote": null,
+                            "ConditionSubtype": null,
+                            "CustomerOrderItemCode": null,
+                            "CustomizationInfoMap": null,
+                            "Gift": false,
+                            "GiftMessage": null,
+                            "GiftWrapType": null,
+                            "HarmonizedCode": null,
+                            "ImageSourceSarek": false,
+                            "ImageUrl": null,
+                            "InvoiceData": null,
+                            "ItemCost": null,
+                            "ItemCustomizations": null,
+                            "ItemHeight": null,
+                            "ItemLength": null,
+                            "ItemPointsSummary": null,
+                            "ItemStatus": null,
+                            "ItemWeight": null,
+                            "ItemWidth": null,
+                            "LegacyListingId": null,
+                            "OrderItemId": "86849377018041",
+                            "PriceDesignation": null,
+                            "ProductCustomizations": null,
+                            "ProductLink": "https://www.amazon.ca/gp/product/B082V9HRDC",
+                            "QuantityCanceled": 0,
+                            "QuantityOrdered": 1,
+                            "QuantityShipped": 1,
+                            "QuantityUnshipped": 0,
+                            "SellerSKU": "AML_NFSL_x067158",
+                            "SerialNumbers": null,
+                            "ShipmentIdLists": null,
+                            "SignatureRecommended": false,
+                            "Title": "New Fashion Style Men's Classic Leather Slim Fit Casual Blazer Stylish Fashinable Evening Coats, Black, XX-Large",
+                            "amazonPrograms": null,
+                            "expenseTotal": null,
+                            "hasLastMileNetworkIdVAS": false,
+                            "heavyOrBulky": false,
+                            "jointFreeShippingPromotionApplied": false,
+                            "packageType": null,
+                            "transparencyItem": false,
+                            "transparencyItemAttribute": null
+                        }
+                    ],
+                    "ShipDate": 1698390000,
+                    "ShipMethodDescriptionLocalizationKey": null,
+                    "ShipmentId": null,
+                    "ShippingService": "DHL Express",
+                    "TrackingId": "1584067026",
+                    "UseEasyShipTrackingPage": false,
+                    "feedbackSuppressionValidationResult": null,
+                    "isShippedViaMultiChannelIntegrator": false,
+                    "shipFromAddressId": "VLH6UWLQ526RU2XIY7DAG12HPFR73EUEBA31BEUE37RFPHNPXTQ2EQA2OXCTKZX3",
+                    "timeZoneDetailsMap": {
+                        "ShipDate": {
+                            "offset": -25200000,
+                            "shortenedTzString": "PDT"
+                        }
+                    }
+                }
+            ],
+            "paymentMethodDetails": [
+                "Standard"
+            ],
+            "pluginActions": {
+                "requestAReview": {
+                    "displayText": "Request a Review",
+                    "isAvailable": true,
+                    "properties": {},
+                    "reason": "Available",
+                    "url": "/messaging/reviews?orderId=701-6899969-4988250&marketplaceId=A2EUQ1WTGCTBG2"
+                }
+            },
+            "pluginAlertMessages": [],
+            "pluginBadges": [],
+            "pluginOrderStatus": null,
+            "pluginValuePairs": [],
+            "possibleCancelReasons": null,
+            "preferredDeliveryTime": null,
+            "promiseResponseDueDate": null,
+            "purchaseDate": 1698175848.772,
+            "recommendedCarrierInfo": null,
+            "replacedOrderId": null,
+            "rootMarketplaceId": "A2EUQ1WTGCTBG2",
+            "salesChannel": "Amazon.ca",
+            "salesChannelFlagUrl": "https://m.media-amazon.com/images/G/01/rainier/nav/CAAmazon._CB485935748_.png",
+            "scheduledDeliveryEndDateUtc": null,
+            "scheduledDeliveryStartDateUtc": null,
+            "scheduledDeliveryTimeZone": null,
+            "scheduledSlot": null,
+            "sellerNotes": null,
+            "sellerOrderId": null,
+            "shippingFromCountry": "US",
+            "shippingService": "Expedited",
+            "shippingServiceOption": null,
+            "shouldDisplayInFBA": false,
+            "shouldEnableTradewindUX": false,
+            "showCRDLink": false,
+            "showRecalculatingProceedsAlert": false,
+            "showShipFromAddressChangeWarning": true,
+            "showVATNotFinalWarning": false,
+            "storeChainStoreID": null,
+            "taxCollectionModel": null,
+            "taxLabelStrings": {
+                "IncludedTax": "Included VAT",
+                "Tax": "Tax",
+                "TaxExclusive": "(VAT exclusive)",
+                "TaxInclusive": "(VAT inclusive)",
+                "TaxTotal": "Tax total"
+            },
+            "taxResponsiblePartyName": null,
+            "timeZoneDetailsMap": {
+                "cancellationDate": {
+                    "offset": -28800000,
+                    "shortenedTzString": "PST"
+                },
+                "earliestDeliveryDate": {
+                    "offset": -25200000,
+                    "shortenedTzString": "PDT"
+                },
+                "earliestShipDate": {
+                    "offset": -25200000,
+                    "shortenedTzString": "PDT"
+                },
+                "latestDeliveryDate": {
+                    "offset": -25200000,
+                    "shortenedTzString": "PDT"
+                },
+                "latestShipDate": {
+                    "offset": -25200000,
+                    "shortenedTzString": "PDT"
+                },
+                "purchaseDate": {
+                    "offset": -25200000,
+                    "shortenedTzString": "PDT"
+                }
+            },
+            "verifiedBusinessBuyer": false
+        }
+    ]
+}
