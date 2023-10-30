@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('orderId', 25)->nullable();
             $table->string('customerId', 50)->nullable();
             $table->string("returnRequestState", 50)->default("PendingRefund");
-            $table->timestamp('approveDate');
-            $table->timestamp('returnRequestDate');
-            $table->timestamp('closeDate');
-            $table->timestamp('orderDate');
+            $table->timestamp('approve_date')->nullable();
+            $table->timestamp('returnRequestDate')->nullable();
+            $table->timestamp('closeDate')->nullable();
+            $table->timestamp('orderDate')->nullable();
             $table->string('rmaId', 25)->nullable();
             $table->string('labelType', 30)->nullable();
             $table->string('carrierName', 30)->nullable();
