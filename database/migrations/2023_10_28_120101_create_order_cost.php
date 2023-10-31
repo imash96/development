@@ -17,23 +17,17 @@ return new class extends Migration
             $table->string('amazonOrderId', 50)->primary();
             $table->timestamps();
             $table->decimal('GrandTotal_Amount')->default(0.00);
-            $table->string('GrandTotal_CurrencyCode')->nullable();
+            $table->string('CurrencyCode')->default('USD');
             $table->decimal('NetSalesProceeds_Amount')->default(0.00);
-            $table->string('NetSalesProceeds_CurrencyCode')->nullable();
             $table->decimal('PromotionTotal_Amount')->default(0.00);
-            $table->string('PromotionTotal_CurrencyCode')->nullable();
             $table->decimal('PromotionTotalTax_Amount')->default(0.00);
-            $table->string('PromotionTotalTax_CurrencyCode')->nullable();
             $table->decimal('RefundTotal_Amount')->default(0.00);
-            $table->string('RefundTotal_CurrencyCode')->nullable();
             $table->decimal('ShippingTotal_Amount')->default(0.00);
-            $table->string('ShippingTotal_CurrencyCode')->nullable();
             $table->decimal('ShippingTotalTax_Amount')->default(0.00);
-            $table->string('ShippingTotalTax_CurrencyCode')->nullable();
-            $table->decimal('TaxTotal_Amount')->nullable();
-            $table->string('TaxTotal_CurrencyCode')->nullable();
+            $table->decimal('TaxTotal_Amount')->default(0.00);
             $table->decimal('Total_Amount')->default(0.00);
-            $table->string('Total_CurrencyCode')->nullable();
+            $table->decimal('Commission_Amount')->default(0.00);
+            $table->decimal('INR_Amount')->default(0.00);
         });
     }
 

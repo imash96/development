@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('deliveryDesc', 50)->default('Not Available');
             $table->string('deliveryStatus', 25)->default('Shipped');
             $table->string('lastLocation', 50)->default('Unknow');
+            $table->dateTimeTz('pickupDate')->nullable();
             $table->dateTimeTz('delivereyDate')->nullable();
             $table->dateTimeTz('estimatedTimeOfDelivery')->nullable();
         });
