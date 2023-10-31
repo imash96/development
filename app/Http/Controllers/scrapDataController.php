@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\ScrapData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Carbon\Carbon;
 
 class scrapDataController extends Controller
 {
@@ -49,7 +48,7 @@ class scrapDataController extends Controller
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 400);
         }
-        $acc->last_scrap = Carbon::createFromTimestamp($requestData['last_scrap']);
+        $acc->last_scrap = $requestData['last_scrap'];
         $acc->isFirstScrap = $requestData['isFirstScrap'];
         $acc->save();
         return response()->json($acc);
@@ -61,7 +60,6 @@ class scrapDataController extends Controller
         if (!$acc) {
             return response()->json(['errors' => 'account not found'], 400);
         }
-        $acc->last_scrap = $acc->last_scrap->format('Y-m-d H:i:s');
         return response()->json($acc);
     }
 }

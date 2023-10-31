@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('roleArn', 50)->nullable();
             $table->string('lwaRefreshToken', 400)->nullable();
             $table->boolean('isFirstScrap')->default(true);
-            $table->timestamp('last_scrap')->nullable();
+            $table->bigInteger('last_scrap')->nullable();
         });
     }
 
