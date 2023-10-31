@@ -61,6 +61,7 @@ class scrapDataController extends Controller
         if (!$acc) {
             return response()->json(['errors' => 'account not found'], 400);
         }
+        $acc->last_scrap = $acc->last_scrap->format('Y-m-d H:i:s');
         return response()->json($acc);
     }
 }
