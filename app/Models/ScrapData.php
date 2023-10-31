@@ -16,6 +16,10 @@ class ScrapData extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'last_scrap' => 'datetime',
+    ];
+
     public static function boot()
     {
         parent::boot();
