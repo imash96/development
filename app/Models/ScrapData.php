@@ -16,8 +16,6 @@ class ScrapData extends Model
 
     protected $guarded = [];
 
-    protected $dateFormat = 'U';
-
     public static function boot()
     {
         parent::boot();
