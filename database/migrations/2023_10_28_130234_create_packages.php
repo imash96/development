@@ -14,20 +14,22 @@ return new class extends Migration
     public function up()
     {
         Schema::create('packages', function (Blueprint $table) {
-            $table->string('PackageId', 50)->primary();
+            $table->string('PackId', 35)->primary();
+            $table->string('PackageId', 50);
             $table->timestamps();
+            $table->string('amazonOrderId', 50);
             $table->string('Carrier')->nullable();
             $table->boolean('IsSignatureConfirmationApplied')->default(false);
             $table->string('ShipmentId')->nullable();
-            $table->timestamp('ShipDate')->nullable();
+            $table->bigInteger('ShipDate')->nullable();
             $table->string('ShippingService')->nullable();
             $table->string('TrackingId')->nullable();
             $table->string('deliveryDesc', 50)->default('Not Available');
             $table->string('deliveryStatus', 25)->default('Shipped');
             $table->string('lastLocation', 50)->default('Unknow');
-            $table->dateTimeTz('pickupDate')->nullable();
-            $table->dateTimeTz('delivereyDate')->nullable();
-            $table->dateTimeTz('estimatedTimeOfDelivery')->nullable();
+            $table->bigInteger('pickupDate')->nullable();
+            $table->bigInteger('delivereyDate')->nullable();
+            $table->bigInteger('estimatedTimeOfDelivery')->nullable();
         });
     }
 

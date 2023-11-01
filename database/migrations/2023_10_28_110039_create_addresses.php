@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('addresses', function (Blueprint $table) {
-            $table->string('addressId', 50)->primary();
+            $table->string('addressId', 100)->primary();
             $table->timestamps();
             $table->string('messageStr', 100)->nullable();
             $table->string('addressType', 25)->default('Residential')->nullable();

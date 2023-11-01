@@ -13,6 +13,7 @@ class ScrapData extends Model
     protected $primaryKey = 'scrap_id';
     public $incrementing = false;
     protected $keyType = 'string';
+    protected $table = 'scrap_data';
 
     protected $guarded = [];
 

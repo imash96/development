@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('customer', function (Blueprint $table) {
-            $table->string('customerId', 50)->primary();
+            $table->string('customerId', 35)->primary();
             $table->timestamps();
             $table->string('buyerName', 50)->nullable();
             $table->string('buyerPONumber', 50)->nullable();

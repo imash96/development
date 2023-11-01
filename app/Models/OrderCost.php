@@ -12,6 +12,9 @@ class OrderCost extends Model
     protected $primaryKey = 'amazonOrderId';
     public $incrementing = false;
     protected $keyType = 'string';
+    protected $table = 'order_cost';
+
+    protected $guarded = [];
 
     public function order()
     {

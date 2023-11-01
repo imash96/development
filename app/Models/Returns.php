@@ -13,6 +13,8 @@ class Returns extends Model
     public $incrementing = false;
     protected $keyType = 'string';
 
+    protected $guarded = [];
+
     public function order()
     {
         return $this->belongsTo(Orders::class, 'amazonOrderId', 'amazonOrderId')->withDefault();

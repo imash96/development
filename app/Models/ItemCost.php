@@ -12,6 +12,9 @@ class ItemCost extends Model
     protected $primaryKey = 'OrderItemId';
     public $incrementing = false;
     protected $keyType = 'string';
+    protected $table = 'item_cost';
+
+    protected $guarded = [];
 
     public function orderItem()
     {

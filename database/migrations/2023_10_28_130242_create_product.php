@@ -14,13 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product', function (Blueprint $table) {
-            $table->string('productId', 50)->primary();
+            $table->string('productId', 35)->primary();
             $table->timestamps();
             $table->string('ASIN', 15)->nullable();
             $table->string('itemId', 15)->nullable();
-            $table->string('size', 15)->default('Unknow');
-            $table->string('color', 20)->default('Black');
-            $table->string('gender', 10)->default('Unknow');
+            $table->string('size', 15)->default('NA');
+            $table->string('color', 20)->default('NA');
+            $table->string('gender', 10)->default('NA');
             $table->string('Condition', 25)->default('New');
             $table->string('ImageUrl', 150)->nullable();
             $table->string('HarmonizedCode', 25)->nullable();
@@ -29,7 +29,6 @@ return new class extends Migration
             $table->string('SellerSKU', 25)->nullable();
             $table->string('Title')->nullable();
             $table->boolean('transparencyItem')->default(false);
-
         });
     }
 

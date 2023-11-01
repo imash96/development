@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('scrap_data', function (Blueprint $table) {
-            $table->string('scrap_id', 50)->primary();
+            $table->string('scrap_id', 35)->primary();
             $table->timestamps();
             $table->string('account_name', 6)->unique();
             $table->string('account_email', 50)->unique();

@@ -4,14 +4,34 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Orders extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'amazonOrderId';
+    protected $primaryKey = 'OrderId';
     public $incrementing = false;
     protected $keyType = 'string';
+
+    protected $casts = [
+        'cancellationDate' => 'timestamp',
+        'earliestDeliveryDate' => 'timestamp',
+        'earliestShipDate' => 'timestamp',
+        'latestDeliveryDate' => 'timestamp',
+        'latestShipDate' => 'timestamp',
+        'purchaseDate' => 'timestamp',
+    ];
+
+    protected $guarded = [];
+
+    public static function boot()
+    {
+        parent::boot();
+        self::creating(function ($model) {
+            $model->OrderId = 'ordr_' . Str::ulid();
+        });
+    }
 
     public function customer()
     {
@@ -30,12 +50,12 @@ class Orders extends Model
 
     public function orderItems()
     {
-        return $this->hasMany(OrderItems::class, 'OrderItemId', 'OrderItemId')->withDefault();
+        return $this->hasMany(OrderItems::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
     }
 
     public function packages()
     {
-        return $this->hasMany(Packages::class, 'PackageId', 'PackageId')->withDefault();
+        return $this->hasMany(Packages::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
     }
 
     public function returns()
