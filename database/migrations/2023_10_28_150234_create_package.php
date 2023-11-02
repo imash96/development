@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('packages', function (Blueprint $table) {
+        Schema::create('package', function (Blueprint $table) {
             $table->string('PackId', 35)->primary();
             $table->string('PackageId', 50);
             $table->timestamps();
-            $table->string('amazonOrderId', 50);
             $table->string('Carrier')->nullable();
             $table->boolean('IsSignatureConfirmationApplied')->default(false);
             $table->string('ShipmentId')->nullable();
@@ -30,6 +29,8 @@ return new class extends Migration
             $table->bigInteger('pickupDate')->nullable();
             $table->bigInteger('delivereyDate')->nullable();
             $table->bigInteger('estimatedTimeOfDelivery')->nullable();
+            $table->string('orderId', 50);
+            $table->foreign('orderId')->references('orderId')->on('order');
         });
     }
 
@@ -40,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packages');
+        Schema::dropIfExists('package');
     }
 };

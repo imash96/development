@@ -27,6 +27,6 @@ class Product extends Model
 
     public function orderItem()
     {
-        return $this->belongsTo(OrderItems::class, 'productId', 'productId')->withDefault();
+        return $this->belongsTo(OrderItem::class, 'productId', 'productId')->withDefault();
     }
 }

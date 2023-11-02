@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('returnRequestId', 50)->primary();
             $table->timestamps();
             $table->string('orderItemId', 50)->nullable();
-            $table->string('orderId', 25)->nullable();
+            $table->string('amazonOrderId', 25)->nullable();
+            $table->string('orderId', 35)->nullable();
             $table->string('customerId', 50)->nullable();
             $table->string("returnRequestState", 50)->default("PendingRefund");
             $table->timestamp('approve_date')->nullable();

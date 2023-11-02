@@ -17,6 +17,6 @@ class Returns extends Model
 
     public function order()
     {
-        return $this->belongsTo(Orders::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
+        return $this->belongsTo(Order::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
     }
 }

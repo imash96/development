@@ -27,6 +27,6 @@ class Customer extends Model
 
     public function order()
     {
-        return $this->belongsTo(Orders::class, 'customerId', 'customerId')->withDefault();
+        return $this->belongsTo(Order::class, 'customerId', 'customerId')->withDefault();
     }
 }

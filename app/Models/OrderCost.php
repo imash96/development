@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class OrderCost extends Model
 {
@@ -18,6 +19,6 @@ class OrderCost extends Model
 
     public function order()
     {
-        return $this->belongsTo(Orders::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
+        return $this->belongsTo(Order::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
     }
 }

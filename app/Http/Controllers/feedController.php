@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\ItemCost;
 use App\Models\OrderCost;
-use App\Models\OrderItems;
-use App\Models\Orders;
-use App\Models\Packages;
+use App\Models\OrderItem;
+use App\Models\Order;
+use App\Models\Package;
 use App\Models\Product;
 use Illuminate\Support\Facades\Log;
 
@@ -20,12 +20,12 @@ class feedController extends Controller
         $requestData = $request->json()->all();
 
         $responseData = ($requestData['type'] == 'amazon') ?
-            $this->amazonFeed($requestData['orders']) : ($requestData['type'] == 'ebay' ?
-                $this->ebayFeed($requestData['orders']) : $this->selfFeed($requestData['orders']));
+            $this->amazonFeed($requestData) : ($requestData['type'] == 'ebay' ?
+                $this->ebayFeed($requestData) : $this->selfFeed($requestData));
         return response()->json($responseData);
     }
 
-    public function amazonFeedProcessing($order)
+    public function amazonFeedProcessing($order, $sellerName)
     {
         $cust = $order['customer'];
         $cust['badges'] = json_encode($cust['badges']);
@@ -49,8 +49,23 @@ class feedController extends Controller
             $ord_cost
         );
 
+        // Log::info(print_r($order, true));
+
         $order_items = $order['order_items'];
         unset($order['order_items']);
+
+        $packages = $order['packages'];
+        unset($order['packages']);
+
+        $ord = Order::updateOrCreate(
+            ['amazonOrderId' => $order['amazonOrderId']],
+            array_merge($order, [
+                'customerId' => $customer['customerId'],
+                'addressId' => $addresses['addressId'],
+                'accountName' => $sellerName
+            ])
+        );
+
         foreach ($order_items as $order_item) {
             $itm_cost = $order_item['item_cost'];
             unset($order_item['item_cost']);
@@ -66,38 +81,29 @@ class feedController extends Controller
                 $prod
             );
 
-            $order_item_obj = OrderItems::updateOrCreate(
+            $order_item_obj = OrderItem::updateOrCreate(
                 ['OrderItemId' => $order_item['OrderItemId']],
                 array_merge($order_item, [
-                    'amazonOrderId' => $order['amazonOrderId'],
+                    'orderId' => $ord['orderId'],
                     'productId' => $product['productId']
                 ])
             );
         }
 
-        $packages = $order['packages'];
-        unset($order['packages']);
         foreach ($packages as $package) {
-            Log::info(print_r($package, true));
-            $pack = Packages::updateOrCreate(
-                ['packageId' => $package['packageId'], 'amazonOrderId' => $order['amazonOrderId']],
+            $pack = Package::updateOrCreate(
+                ['packageId' => $package['packageId'], 'orderId' => $ord['orderId']],
                 $package
             );
         }
-
-        $ord = Orders::updateOrCreate(
-            ['amazonOrderId' => $order['amazonOrderId']],
-            array_merge($order, [
-                'customerId' => $customer['customerId'],
-                'addressId' => $addresses['addressId']
-            ])
-        );
     }
 
-    public function amazonFeed($orders)
+    public function amazonFeed($requestData)
     {
+        $orders = $requestData['orders'];
+        $sellerName = $requestData['sellerName'];
         foreach ($orders as $order) {
-            $this->amazonFeedProcessing($order);
+            $this->amazonFeedProcessing($order, $sellerName);
         }
         return response()->json(['status' => 'success']);
     }

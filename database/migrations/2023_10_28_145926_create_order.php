@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->string('OrderId', 35)->primary();
+        Schema::create('order', function (Blueprint $table) {
+            $table->string('orderId', 35)->primary();
             $table->string('amazonOrderId', 25)->nullable();
             $table->string('ebayOrderId', 25)->nullable();
             $table->timestamps();
@@ -70,6 +70,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('order');
     }
 };

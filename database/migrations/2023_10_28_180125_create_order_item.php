@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order_items', function (Blueprint $table) {
+        Schema::create('order_item', function (Blueprint $table) {
             $table->string('OrderItemId', 50)->primary();
             $table->timestamps();
             $table->boolean('isBuyerRequestedCancel')->default(false);
@@ -33,7 +33,8 @@ return new class extends Migration
             $table->smallInteger('QuantityUnshipped')->default(0);
             $table->boolean('SignatureRecommended')->default(false);
             $table->string('productId', 50);
-            $table->string('amazonOrderId', 50);
+            $table->string('orderId', 50);
+            $table->foreign('orderId')->references('orderId')->on('order');
             $table->foreign('productId')->references('productId')->on('product');
             $table->foreign('OrderItemId')->references('OrderItemId')->on('item_cost');
         });
@@ -46,6 +47,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_items');
+        Schema::dropIfExists('order_item');
     }
 };

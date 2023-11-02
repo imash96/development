@@ -17,6 +17,6 @@ class Addresses extends Model
 
     public function order()
     {
-        return $this->belongsTo(Orders::class, 'addressId', 'addressId')->withDefault();
+        return $this->belongsTo(Order::class, 'addressId', 'addressId')->withDefault();
     }
 }

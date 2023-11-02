@@ -18,6 +18,6 @@ class ItemCost extends Model
 
     public function orderItem()
     {
-        return $this->belongsTo(OrderItems::class, 'OrderItemId', 'OrderItemId')->withDefault();
+        return $this->belongsTo(OrderItem::class, 'OrderItemId', 'OrderItemId')->withDefault();
     }
 }

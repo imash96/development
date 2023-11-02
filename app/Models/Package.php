@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Packages extends Model
+class Package extends Model
 {
     use HasFactory;
 
     protected $primaryKey = 'PackId';
     public $incrementing = false;
     protected $keyType = 'string';
+    protected $table = 'package';
 
     protected $guarded = [];
 
@@ -33,6 +34,6 @@ class Packages extends Model
 
     public function order()
     {
-        return $this->belongsTo(Orders::class, 'amazonOrderId', 'amazonOrderId')->withDefault();
+        return $this->belongsTo(Order::class, 'orderId', 'orderId');
     }
 }
